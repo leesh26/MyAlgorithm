@@ -1,4 +1,4 @@
-# 주식 가격
+# 주식 가격 
 # https://programmers.co.kr/learn/courses/30/lessons/42584
 
 def solution(prices):
