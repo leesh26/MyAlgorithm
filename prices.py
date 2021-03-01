@@ -1,8 +1,8 @@
 # 주식 가격
 # https://programmers.co.kr/learn/courses/30/lessons/42584
 
-def prices_function(prices):
-    lower = []
+def solution(prices):
+    answer = []
 
     for k in range (len(prices)):
         # lower_day의 초기값 지정 (총 길이 - 현재값 + 1)
@@ -13,6 +13,6 @@ def prices_function(prices):
             # 자신보다 작은값이 나오면 lower_day의 값을 바꿔줌
             if prices[k]>prices[i]:
                 lower_day = i-k
-        lower.append(lower_day)
+        answer.append(lower_day)
 
-    return lower
+    return answer
