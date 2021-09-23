@@ -48,3 +48,11 @@ else:
 #4 단어의 개수
 #https://www.acmicpc.net/problem/1152
 
+word = input().strip().split(" ") # 쉬운 문젠데 공백이 함정 ㅎㅎ..
+if '' in word:
+    print(0)
+else:
+    print(len(word))
+
+#5 크로아티아 알파벳
+# https://www.acmicpc.net/problem/2941
