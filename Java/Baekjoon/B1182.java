@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class B1182 {
+public class Main {
     static int n, s, len;
     static int[] nums;
     static int ans = 0;
