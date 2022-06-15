@@ -23,18 +23,16 @@ public class Main {
             if(x == 0 && y == 0) break;
 
             int temp_direction = (direction +1) % 4; // direction은 계속 바뀌어야 함
-            // 만약 이미 방문했다면 다시 돌리고 이동
             int nx = x + mx[temp_direction];
             int ny = y + my[temp_direction];
 
-            if (board[nx][ny] != 0){
-                nx = x + mx[direction];
-                ny = y + my[direction];
+            if (board[nx][ny] == 0) {
+                direction = temp_direction;
+                x = nx;
+                y = ny;
+                board[x][y] = i++;
             }
-            else direction = temp_direction;
-
-            x = nx; y = ny;
-            board[x][y] = i++;
+            else direction = (direction - 1) % 4; // 이미 방문했다면 다시 돌리고 이동
         }
 
         int[] answer = {0, 0};
