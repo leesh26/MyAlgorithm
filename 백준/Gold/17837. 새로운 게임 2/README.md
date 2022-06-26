@@ -4,7 +4,7 @@
 
 ### 성능 요약
 
-메모리: 32580 KB, 시간: 252 ms
+메모리: 14304 KB, 시간: 136 ms
 
 ### 분류
 
@@ -64,10 +64,10 @@
 <table class="table table-bordered" style="width: 100%;">
 	<tbody>
 		<tr>
-			<td style="width: 25%; text-align: center;"><img alt="" src="" style="width: 250px; height: 252px;"></td>
-			<td style="width: 25%; text-align: center;"><img alt="" src="" style="width: 250px; height: 251px;"></td>
-			<td style="width: 25%; text-align: center;"><img alt="" src="" style="width: 250px; height: 251px;"></td>
-			<td style="width: 25%; text-align: center;"><img alt="" src="" style="width: 250px; height: 252px;"></td>
+			<td style="width: 25%; text-align: center;"><img alt="" src="https://upload.acmicpc.net/36568153-8c2a-4fe9-b45f-72036c97f5aa/-/preview/" style="width: 250px; height: 252px;"></td>
+			<td style="width: 25%; text-align: center;"><img alt="" src="https://upload.acmicpc.net/babead43-4acc-425d-917a-54dcc6f45414/-/preview/" style="width: 250px; height: 251px;"></td>
+			<td style="width: 25%; text-align: center;"><img alt="" src="https://upload.acmicpc.net/1edd5ed8-0f4c-4c6d-b304-3b7642f42c6f/-/preview/" style="width: 250px; height: 251px;"></td>
+			<td style="width: 25%; text-align: center;"><img alt="" src="https://upload.acmicpc.net/028a5dd2-5524-4475-8439-9e7794e28ee4/-/preview/" style="width: 250px; height: 252px;"></td>
 		</tr>
 	</tbody>
 </table>
