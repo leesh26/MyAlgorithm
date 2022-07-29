@@ -12,7 +12,7 @@ public class Solution {
 		int n = room.length, m = room[0].length;
 		int[][] visited = new int[n][m];
 		for (int i = 0; i < n; i++)
-				for (int j = 0; j < m; j++) visited[i][j] = -1;
+			for (int j = 0; j < m; j++) visited[i][j] = -1;
 
 		Queue<int[]> q = new LinkedList<>();
 
@@ -27,39 +27,38 @@ public class Solution {
 		int ans = 0;
 
 		while (!q.isEmpty()){
-				temp = q.poll();
-				int d = temp[2];
-				int x = temp[0], y = temp[1];
-				System.out.println(Arrays.toString(temp));
+			temp = q.poll();
+			int d = temp[2];
+			int x = temp[0], y = temp[1];
 
-				if (x == dst[0] && y == dst[1]) {
-						dDir -= 1;
-						if (d == dDir) {
-								ans = visited[x][y];
-						}
-						else {
-								if (((d - 1) % 4 == dDir) || ((d + 1) % 4 == dDir)) ans = visited[x][y] + 1;
-								else ans = visited[x][y] + 2;
-						}
-						break;
+			if (x == dst[0] && y == dst[1]) {
+				dDir -= 1;
+				if (d == dDir) {
+					ans = visited[x][y];
 				}
-
-				for (int i = 0; i < 4; i++){
-						int tempX = x, tempY = y;
-						while (true) {
-								nx = tempX + mx[d];
-								ny = tempY + my[d];
-								if (nx >= n || ny >= m || nx < 0 || ny < 0 || room[nx][ny] == 1) break;
-								if (visited[nx][ny] != -1) break;
-
-								if (i == 1 || i == 3) visited[nx][ny] = visited[x][y] + 2;
-								else visited[nx][ny] = visited[x][y] + i + 1;
-
-								q.add(new int[]{nx, ny, d});
-								tempX = nx; tempY = ny;
-						}
-						d = (d + 1) % 4;
+				else {
+					if (((d - 1) % 4 == dDir) || ((d + 1) % 4 == dDir)) ans = visited[x][y] + 1;
+					else ans = visited[x][y] + 2;
 				}
+				break;
+			}
+
+			for (int i = 0; i < 4; i++){
+				int tempX = x, tempY = y;
+				while (true) {
+					nx = tempX + mx[d];
+					ny = tempY + my[d];
+					if (nx >= n || ny >= m || nx < 0 || ny < 0 || room[nx][ny] == 1) break;
+					if (visited[nx][ny] != -1) break;
+
+					if (i == 1 || i == 3) visited[nx][ny] = visited[x][y] + 2;
+					else visited[nx][ny] = visited[x][y] + i + 1;
+
+					q.add(new int[]{nx, ny, d});
+					tempX = nx; tempY = ny;
+				}
+				d = (d + 1) % 4;
+			}
 		}
 		return ans;
   }
