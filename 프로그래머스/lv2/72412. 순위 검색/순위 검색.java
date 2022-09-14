@@ -72,12 +72,12 @@ public class Solution {
 
                 // 이분 탐색
                 int low = 0;
-                int high = score[j].size();
+                int high = score[j].size() - 1;
 
-                while (low < high){
+                while (low <= high){
                     int mid = (low + high) / 2;
                     if (s <= score[j].get(mid)){
-                        high = mid;
+                        high = mid - 1;
                     }
                     else {
                         low = mid + 1;
